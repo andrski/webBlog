@@ -1,0 +1,35 @@
+
+<h1>My Blogs</h1>
+
+{{#if blogs.length}}
+<ul>
+    {{#each blogs}}
+
+    <li class="li">
+                
+            {{#if true}}
+
+            <p>{{titleText}}</p>
+            <p>{{content}}</p>
+            <p>{{published}}</p>
+
+            {{/if}}
+        
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>NO Blogs!!!!!</p>
+{{/if}}
+
+    <form method="post" action="/deleteone">
+        <button type="submit" class="btn">deleteOne</button>
+    </form>
+
+
+
+    <form method="post" action="/deletemany">
+        <button type="submit" class="btn">deleteMany</button>
+    </form>
+
+
