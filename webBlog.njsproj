@@ -30,6 +30,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="config\keys.js" />
+    <Content Include="midlleware\passport.js" />
     <Content Include="models\usersh.js">
       <SubType>Code</SubType>
     </Content>
@@ -42,13 +44,18 @@
     <Content Include="package.json" />
     <Content Include="public\stylesheets\index.css" />
     <Content Include="README.md" />
-    <Content Include="views\authent.hbs" />
+    <Content Include="views\authlogin.hbs" />
+    <Content Include="views\authsign.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\layouts\index.hbs" />
     <Content Include="views\mainpage.hbs" />
     <Content Include="views\post.hbs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
+    <Folder Include="config\" />
+    <Folder Include="midlleware\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />

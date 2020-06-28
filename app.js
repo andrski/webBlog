@@ -1,6 +1,7 @@
 'use strict';
 var express = require('express');
 const mongoose = require('mongoose');
+const passport = require('passport');
 const bodyParser = require('body-parser');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -16,7 +17,7 @@ var app = express();
 
 const port = process.env.PORT || 3000;
 
-const uri ='insert your mongoDB atlas uri!!!!!!!'
+const uri ='insert your mongoDB atlas URI'
 
 const hbs = exphbs.create({
     defaultLayout: 'index',
@@ -39,6 +40,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true })); // build-in function express, urlencoded!!!! for read body(browser)
 app.use(express.static(path.join(__dirname, '/public/stylesheets'))); // for add CSSengine
 
+app.use(passport.initialize());
+require('./midlleware/passport')(passport); // инициализируем функцию из passport.js и сразу вызываем ее передавая арг
 
 app.use( routInd);
 app.use(routPost);

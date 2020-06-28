@@ -1,11 +1,12 @@
 'use strict';
 var express = require('express');
 var routInd = express.Router();
+const passport = require('passport');
 
 const Post = require('../models/blogschema.js');
 
 /* GET mainpage. */
-routInd.get('/', async function (req, res) {
+routInd.get('/', passport.authenticate('jwt', { session: false }), async function (req, res) {
 
     const blogs = await Post.find();
    
