@@ -17,7 +17,7 @@ var app = express();
 
 const port = process.env.PORT || 3000;
 
-const uri ='insert your mongoDB atlas URI'
+const uri ='insert your MongoDB atkas URI!!!'
 
 const hbs = exphbs.create({
     defaultLayout: 'index',

@@ -3,6 +3,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');// pacage for crypt password!!!
 const jwt = require('jsonwebtoken');
 const keys = require('../config/keys.js'); // export obj keys from keys.js
+const errorHandler = require('../utils/errorHandler.js');
 const routAuth = express.Router();
 
 const User = require('../models/usersh.js');
@@ -49,6 +50,7 @@ routAuth.post('/createuser', async (req, res) => {
         }
         catch (err) {
             // throw err
+            errorHandler(res, err);
         }
     }
       res.redirect('/user');

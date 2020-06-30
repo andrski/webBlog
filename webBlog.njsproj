@@ -44,6 +44,9 @@
     <Content Include="package.json" />
     <Content Include="public\stylesheets\index.css" />
     <Content Include="README.md" />
+    <Content Include="utils\errorHandler.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\authlogin.hbs" />
     <Content Include="views\authsign.hbs">
       <SubType>Code</SubType>
@@ -56,6 +59,7 @@
     <Folder Include="models\" />
     <Folder Include="config\" />
     <Folder Include="midlleware\" />
+    <Folder Include="utils\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
